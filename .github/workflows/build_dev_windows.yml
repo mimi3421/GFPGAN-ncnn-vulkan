@@ -61,7 +61,7 @@ jobs:
     - name: Pack artifacts
       id: pack_artifacts
       run: |
-        7z a gfpgan-ncnn-vulkan.zip .\build\bin\Release
+        7z a gfpgan-ncnn-vulkan.zip .\build\Release
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
