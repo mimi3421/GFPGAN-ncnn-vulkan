@@ -43,7 +43,6 @@ jobs:
       run: |
         Invoke-WebRequest -Uri https://sdk.lunarg.com/sdk/download/${env:VULKAN_VERSION}/windows/vulkansdk-windows-X64-${env:VULKAN_VERSION}.exe -OutFile VulkanSDK-${env:VULKAN_VERSION}-Installer.exe
         7z x -aoa ./VulkanSDK-${env:VULKAN_VERSION}-Installer.exe -oVulkanSDK
-        Remove-Item .\VulkanSDK\Demos -Recurse
     - name: install opencv
       if: steps.cache-opencv.outputs.cache-hit != 'true'
       run: |
